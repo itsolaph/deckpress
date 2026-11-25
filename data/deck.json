@@ -1,0 +1,294 @@
+{
+  "game": {
+    "title": "SIGNAL // NOISE",
+    "subtitle": "An 18-card asymmetric relay & interference game",
+    "edition": "Playtest Packet v1.2",
+    "players": "3-5 players",
+    "duration": "15-20 min",
+    "ages": "12+",
+    "cardCount": 18,
+    "rulesUrl": "https://deckpress.example/signal-noise/rules",
+    "feedbackUrl": "https://deckpress.example/signal-noise/feedback",
+    "downloadUrl": "https://deckpress.example/signal-noise/deck-a4.pdf",
+    "summary": "Keep the emergency telemetry bus alive until Dawn, or flood the frequency with static before the final checksum clears.",
+    "setup": [
+      "Separate the 5 Role cards (SYS-01 to SYS-05). Shuffle them and deal 1 face-down to each player; return unused Roles to the box without looking.",
+      "Shuffle the remaining 13 Action cards (Relays, Interference, Overrides) to form the Transmission Stack.",
+      "Deal 2 Action cards to each player as their starting hand. Set a 6-tick Dawn track beside the stack starting at Tick 0."
+    ],
+    "turnSteps": [
+      {
+        "step": "1. Draw",
+        "detail": "Draw 1 card from the Transmission Stack. If the stack is empty, shuffle the Burn pile into a fresh stack and advance Dawn by 1."
+      },
+      {
+        "step": "2. Transmit",
+        "detail": "Play 1 card from hand face-up (or face-down if Spoofed Packet) onto the table bus, paying its Bandwidth cost by discarding cards equal to Cost - 1, or pass to draw 1 extra card."
+      },
+      {
+        "step": "3. Resolve & Tick",
+        "detail": "Apply the card's effect, resolve any reaction window, and advance the Dawn counter by 1 tick unless an effect alters the clock."
+      }
+    ],
+    "winConditions": [
+      {
+        "faction": "SIGNAL",
+        "condition": "Total active Signal Power on the table reaches 8 or higher when Tick 6 concludes."
+      },
+      {
+        "faction": "NOISE",
+        "condition": "Active Interference + Noise bursts equal or exceed Signal Power at Tick 6, OR 3 Relays are locked down simultaneously."
+      },
+      {
+        "faction": "NEUTRAL",
+        "condition": "The Dead-Drop Courier wins alone if both Signal Relays and Noise Bursts finish with exactly 2 active cards each."
+      }
+    ],
+    "printNotes": [
+      "Print at 100% (Actual Size) — never use 'Fit to Page' or 'Shrink Oversized Pages'.",
+      "For double-sided printing, select Duplex: Flip on Long Edge. Backs on pages 2 and 4 are mirrored 3-2-1 to match fronts.",
+      "Cut along the outer hairline crop marks after printing; each trimmed card measures 2.25 x 3.125 in (57 x 79 mm)."
+    ],
+    "playtestFocus": [
+      "Does the Bandwidth discard cost on 3-cost cards feel fair in 3-player games?",
+      "Is the Dead-Drop Courier win condition achievable without table-talk giveaways?",
+      "Check duplex alignment between page 1 and page 2 on your home printer."
+    ]
+  },
+  "cards": [
+    {
+      "id": "SYS-01",
+      "name": "Relay Operator",
+      "category": "Role",
+      "faction": "SIGNAL",
+      "cost": 0,
+      "power": 3,
+      "powerLabel": "SIG",
+      "ability": "Once per round, inspect the top 2 cards of the Stack. Keep 1 Relay or Override; bury the other face-down.",
+      "flavor": "Keep the carrier clean until sunrise.",
+      "emblem": "operator",
+      "featured": true
+    },
+    {
+      "id": "SYS-02",
+      "name": "Spectrum Analyst",
+      "category": "Role",
+      "faction": "SIGNAL",
+      "cost": 0,
+      "power": 2,
+      "powerLabel": "SIG",
+      "ability": "Peek at one neighbor's face-down card on the table without revealing it to other players.",
+      "flavor": "Every spike leaves a harmonic fingerprint.",
+      "emblem": "analyst",
+      "featured": false
+    },
+    {
+      "id": "SYS-03",
+      "name": "Static Saboteur",
+      "category": "Role",
+      "faction": "NOISE",
+      "cost": 0,
+      "power": 3,
+      "powerLabel": "NOI",
+      "ability": "When the Dawn clock hits Tick 3, secretly swap 1 active Relay with any card in the Burn pile.",
+      "flavor": "Dead air is just an uncontested channel.",
+      "emblem": "saboteur",
+      "featured": true
+    },
+    {
+      "id": "SYS-04",
+      "name": "Echo Broker",
+      "category": "Role",
+      "faction": "NOISE",
+      "cost": 0,
+      "power": 2,
+      "powerLabel": "NOI",
+      "ability": "Once per game, copy the most recently played Interference card as if you played it from hand.",
+      "flavor": "Repeat a lie on three bands and it becomes telemetry.",
+      "emblem": "broker",
+      "featured": false
+    },
+    {
+      "id": "SYS-05",
+      "name": "Dead-Drop Courier",
+      "category": "Role",
+      "faction": "NEUTRAL",
+      "cost": 0,
+      "power": 2,
+      "powerLabel": "PWR",
+      "ability": "Win alone at Dawn if exactly 2 Signal Relays and 2 Noise Bursts remain active on the bus.",
+      "flavor": "Neither side owns the courier's frequency.",
+      "emblem": "courier",
+      "featured": true
+    },
+    {
+      "id": "SIG-01",
+      "name": "Uplink Beacon",
+      "category": "Relay",
+      "faction": "SIGNAL",
+      "cost": 1,
+      "power": 2,
+      "powerLabel": "SIG",
+      "ability": "Lock onto the main bus. Contributes +2 Signal Power toward the Dawn threshold.",
+      "flavor": "First pulse establishes clock sync.",
+      "emblem": "beacon",
+      "featured": false
+    },
+    {
+      "id": "SIG-02",
+      "name": "Carrier Wave",
+      "category": "Relay",
+      "faction": "SIGNAL",
+      "cost": 2,
+      "power": 3,
+      "powerLabel": "SIG",
+      "ability": "Cannot be cancelled by Static Burst if another Signal Relay is already locked on the bus.",
+      "flavor": "Steady amplitude cuts through heavy weather.",
+      "emblem": "wave",
+      "featured": true
+    },
+    {
+      "id": "SIG-03",
+      "name": "Checksum Gate",
+      "category": "Relay",
+      "faction": "SIGNAL",
+      "cost": 1,
+      "power": 1,
+      "powerLabel": "SIG",
+      "ability": "Draw 1 card when this Relay resolves. Reveal any 1 card currently in the Burn pile.",
+      "flavor": "Every frame arrives signed or discarded.",
+      "emblem": "gate",
+      "featured": false
+    },
+    {
+      "id": "SIG-04",
+      "name": "Phase Filter",
+      "category": "Relay",
+      "faction": "SIGNAL",
+      "cost": 2,
+      "power": 2,
+      "powerLabel": "SIG",
+      "ability": "Purge 1 active Interference card from the table into the Burn pile, then lock this Relay.",
+      "flavor": "Notch out the hum, keep the voice.",
+      "emblem": "filter",
+      "featured": false
+    },
+    {
+      "id": "SIG-05",
+      "name": "Burst Repeater",
+      "category": "Relay",
+      "faction": "SIGNAL",
+      "cost": 1,
+      "power": 1,
+      "powerLabel": "SIG",
+      "ability": "Each adjacent Relay on the bus gains +1 Signal Power while this Repeater stays online.",
+      "flavor": "Weak signal amplified across three towers.",
+      "emblem": "repeater",
+      "featured": false
+    },
+    {
+      "id": "SIG-06",
+      "name": "Coldline Bridge",
+      "category": "Relay",
+      "faction": "SIGNAL",
+      "cost": 3,
+      "power": 4,
+      "powerLabel": "SIG",
+      "ability": "Discard 1 card from hand when played to lock immediately without opening a reaction window.",
+      "flavor": "Hard-wired copper never asks permission.",
+      "emblem": "bridge",
+      "featured": false
+    },
+    {
+      "id": "NOI-01",
+      "name": "Static Burst",
+      "category": "Interference",
+      "faction": "NOISE",
+      "cost": 1,
+      "power": 2,
+      "powerLabel": "NOI",
+      "ability": "Cancel a Relay played this turn unless its sender discards 1 extra card from hand.",
+      "flavor": "White noise at 140 decibels.",
+      "emblem": "static",
+      "featured": false
+    },
+    {
+      "id": "NOI-02",
+      "name": "Spoofed Packet",
+      "category": "Interference",
+      "faction": "NOISE",
+      "cost": 1,
+      "power": 1,
+      "powerLabel": "NOI",
+      "ability": "Play face-down claiming it is a Relay. Flip when audited or at Dawn to cancel +2 Signal.",
+      "flavor": "Valid header, hollow payload.",
+      "emblem": "spoof",
+      "featured": false
+    },
+    {
+      "id": "NOI-03",
+      "name": "Clock Drift",
+      "category": "Interference",
+      "faction": "NOISE",
+      "cost": 2,
+      "power": 2,
+      "powerLabel": "NOI",
+      "ability": "Reverse play order around the table and advance the Dawn counter by 1 extra tick.",
+      "flavor": "Two lost milliseconds break every handshake.",
+      "emblem": "drift",
+      "featured": false
+    },
+    {
+      "id": "NOI-04",
+      "name": "Blackout Fuse",
+      "category": "Interference",
+      "faction": "NOISE",
+      "cost": 3,
+      "power": 3,
+      "powerLabel": "NOI",
+      "ability": "Lock down the highest-power active Relay on the table; its Signal Power drops to 0.",
+      "flavor": "Cut the breaker before the frame completes.",
+      "emblem": "blackout",
+      "featured": false
+    },
+    {
+      "id": "OVR-01",
+      "name": "Hard Reboot",
+      "category": "Override",
+      "faction": "OVERRIDE",
+      "cost": 2,
+      "power": 2,
+      "powerLabel": "PWR",
+      "ability": "All players pass 1 card face-down to the left. Clear all lockdown tokens on Relays.",
+      "flavor": "Flush the buffer and trust nobody's cache.",
+      "emblem": "reboot",
+      "featured": false
+    },
+    {
+      "id": "OVR-02",
+      "name": "Parity Audit",
+      "category": "Override",
+      "faction": "OVERRIDE",
+      "cost": 1,
+      "power": 1,
+      "powerLabel": "PWR",
+      "ability": "Target player must reveal either their hidden Role card or all cards remaining in their hand.",
+      "flavor": "Show your checksum or surrender the frame.",
+      "emblem": "audit",
+      "featured": false
+    },
+    {
+      "id": "OVR-03",
+      "name": "Emergency Patch",
+      "category": "Override",
+      "faction": "OVERRIDE",
+      "cost": 1,
+      "power": 2,
+      "powerLabel": "PWR",
+      "ability": "Recover 1 Relay card from the Burn pile into your hand and immediately end your turn.",
+      "flavor": "Soldered in the dark with thirty seconds left.",
+      "emblem": "patch",
+      "featured": false
+    }
+  ]
+}

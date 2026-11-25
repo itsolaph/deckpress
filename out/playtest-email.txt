@@ -1,0 +1,94 @@
+DECKPRESS PLAYTEST DISPATCH
+
+Playtest Packet v1.2
+
+SIGNAL // NOISE IS READY FOR TABLE TESTING
+
+Hey {{first_name}}, the latest 18-card print-and-play build is compiled. Print pages 1–4 double-sided on A4 or Letter stock, or drop the individual PNGs straight into your virtual tabletop.
+
+Download A4 Print PDF (https://deckpress.example/signal-noise/deck-a4.pdf)
+
+Read Rules & Gallery (https://deckpress.example/signal-noise/rules)
+
+Packet Contents
+
+WHAT CHANGED IN PLAYTEST PACKET V1.2
+
+Artifact | Details
+Print PDF (A4 & Letter) | 9-up 3x3 sheets, 4 px bleed, precision crop marks, 3-2-1 mirrored backs.
+VTT Card PNGs | 18 crisp 1000x1400 px card fronts + shared geometric card back.
+Rules Reference | Single-page quick-start sheet on Page 5 + full visual gallery online.
+
+Deck Spotlight
+
+FOUR CARDS TO WATCH THIS WEEK
+
+Pulled directly from data/deck.json so stats and ability wording always match your printed sheets.
+
+SYS-01 · ROLE
+
+SIGNAL
+
+---
+
+Relay Operator
+
+Once per round, inspect the top 2 cards of the Stack. Keep 1 Relay or Override; bury the other face-down.
+
+Cost 0 · SIG +3
+
+SYS-03 · ROLE
+
+NOISE
+
+---
+
+Static Saboteur
+
+When the Dawn clock hits Tick 3, secretly swap 1 active Relay with any card in the Burn pile.
+
+Cost 0 · NOI +3
+
+SYS-05 · ROLE
+
+COURIER
+
+---
+
+Dead-Drop Courier
+
+Win alone at Dawn if exactly 2 Signal Relays and 2 Noise Bursts remain active on the bus.
+
+Cost 0 · PWR +2
+
+SIG-02 · RELAY
+
+SIGNAL
+
+---
+
+Carrier Wave
+
+Cannot be cancelled by Static Burst if another Signal Relay is already locked on the bus.
+
+Cost 2 · SIG +3
+
+Before You Cut
+
+3-STEP DUPLEX PRINT CHECKLIST
+
+1. Print at 100% (Actual Size) — never use 'Fit to Page' or 'Shrink Oversized Pages'.
+2. For double-sided printing, select Duplex: Flip on Long Edge. Backs on pages 2 and 4 are mirrored 3-2-1 to match fronts.
+3. Cut along the outer hairline crop marks after printing; each trimmed card measures 2.25 x 3.125 in (57 x 79 mm).
+
+---
+
+Questions for your playtest log:
+
+- Does the Bandwidth discard cost on 3-cost cards feel fair in 3-player games?
+- Is the Dead-Drop Courier win condition achievable without table-talk giveaways?
+- Check duplex alignment between page 1 and page 2 on your home printer.
+
+Submit Playtest Notes (https://deckpress.example/signal-noise/feedback)
+
+DeckPress Playtest Dispatch · View Rules in Browser (https://deckpress.example/signal-noise/rules) · Manage Preferences (https://deckpress.example/signal-noise/feedback)

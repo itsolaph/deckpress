@@ -1,0 +1,37 @@
+{
+  "name": "deckpress-hyper-elements",
+  "version": "1.0.0",
+  "description": "DeckPress: print-and-play card deck kit built with Hyper Elements (React -> PDF, PNG, Web Page, Email from one JSON deck).",
+  "license": "MIT",
+  "author": "olaph",
+  "type": "module",
+  "scripts": {
+    "build": "tsx src/build.ts",
+    "build:a4": "tsx src/build.ts --paper a4",
+    "build:letter": "tsx src/build.ts --paper letter",
+    "check": "tsx src/check.ts",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test src/deck.test.ts"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.2.8",
+    "@fontsource/inter": "^5.2.8",
+    "@fontsource/space-grotesk": "^5.2.10",
+    "@hyper-elements/react": "^0.5.2",
+    "@react-pdf/renderer": "^4.9.1",
+    "@resvg/resvg-js": "^2.6.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "satori": "^0.33.5"
+  },
+  "devDependencies": {
+    "@hyper-elements/cli": "^0.3.0",
+    "@hyper-elements/email-clients": "^0.4.3",
+    "@types/node": "^25.0.3",
+    "@types/react": "^19.1.6",
+    "@types/react-dom": "^19.1.5",
+    "playwright-core": "^1.57.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
